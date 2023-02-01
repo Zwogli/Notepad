@@ -1,0 +1,33 @@
+:root{
+    --color-one: #C5A077;
+    --color-two: #8E6D46;
+    --color-three: #FFECCC;
+    --color-four: #C8C6BA;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--color-three);
+}
+header{
+    height: 150px;
+}
+header img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+#new-note{
+    background-color: var(--color-one);
+    margin: 25px 10% ;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--color-two);
+}
+footer{
+    height: 200px;
+    background-color: var(--color-two);
+}
