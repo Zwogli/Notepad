@@ -3,6 +3,7 @@
     --color-two: #8E6D46;
     --color-three: #FFECCC;
     --color-four: #C8C6BA;
+    --black: black;
 }
 *{
     margin: 0;
@@ -24,9 +25,31 @@ header img{
     background-color: var(--color-one);
     margin: 25px 10% ;
     height: 300px;
+    border: 2px solid var(--color-two);
     border-radius: 10px;
     box-shadow: 5px 5px 5px var(--color-two);
+    display: flex;
+    flex-direction: column;
 }
+#new-note input{
+    margin: 16px 32px 16px 32px;
+    background-color: var(--color-one);
+    color: var(--black);
+    border: none;
+}
+#new-note textarea{
+    margin: 16px 32px 16px 32px;
+    background-color: var(--color-one);
+    color: var(--black);
+    border: none;
+}
+#add{
+    margin: 16px 32px 16px 32px;
+    gap: 32px;
+    display: flex;
+    justify-content: flex-end;
+}
+/*todo #add img */
 footer{
     height: 200px;
     background-color: var(--color-two);
