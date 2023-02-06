@@ -14,7 +14,15 @@
     
     <header id="header"></header>
 
-    <section id="new-notes" class="center-note"></section>
+    <section onclick="closeTask()" id="new-notes" class="new-notes-bg; d-none">
+        <div id="new-note" class="note">
+            <input id="new-title" class="newNote-innerStyle" type="text" placeholder="Title" required>
+            <textarea  id="new-message" class="newNote-innerStyle" cols="10" rows="5" placeholder="Message" required></textarea>
+            <div class="add">
+                <img onclick="addNote()" id="add-icon" class="icon-note" src="img/icon/check-mark-2-64.png" alt="add Note">
+            </div>
+        </div>
+    </section>
     
     <section id="added-notes" class="center-note"></section>
 

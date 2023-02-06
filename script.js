@@ -1,11 +1,13 @@
 let noteTitles = ['test', 'test2'];
 let noteMessages = ['erste Nachricht', 'zweite Nachricht'];
+let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
 load();
 
 
 function render(){
     renderHeader();
-    renderNewNote();
+    getCurrentDate();
+    
     renderNotes();
 }
 
@@ -18,28 +20,40 @@ function renderHeader(){
     <div class="header-container">
         <div class="header-title">
             <h1>Notes</h1>
-
-            <p id="uhr"></p>
+            <h3 id="date"></h3>
         </div>
-        <img class="icon-note" src="img/icon/menu-4-64.png" alt="">
+        <img class="icon-note" onclick="openMenu()" src="img/icon/menu-4-64.png" alt="">
     </div>
+    <nav>
+        <ul id="menu-list" class="d-none">
+        <li><a onclick="renderNewNote()">Neue Aufgabe <img src="img/icon/text-file-4-64.png" alt="file"></a></li>
+        <li><a>Papierkorb <img src="img/icon/trash-2-64.png" alt="trash"></a></li>
+        </ul>
+    </nav>
     `;
 }
+
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function openMenu() {
+    var x = document.getElementById("menu-list");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
 
 
 //<<<<<<<<< add New Note 
 function renderNewNote(){
     let newNotes = document.getElementById('new-notes');
-    newNotes.innerHTML = '';
-    newNotes.innerHTML = /*html*/`
-    <div id="new-note" class="note">
-            <input id="new-title" class="newNote-innerStyle" type="text" placeholder="Title" required>
-            <textarea  id="new-message" class="newNote-innerStyle" cols="10" rows="5" placeholder="Message" required></textarea>
-            <div class="add">
-                <img onclick="addNote()" id="add-icon" class="icon-note" src="img/icon/check-mark-2-64.png" alt="add Note">
-            </div>
-        </div>
-    `;
+    newNotes.classList.remove('d-none'); 
+}
+
+
+function closeTask(){
+    document.getElementById('new-notes').classList.add('d-none');
 }
 
 
@@ -78,7 +92,7 @@ function addNote(){
 }
 
 
-//<<<<<<<<<< delte Array
+//<<<<<<<<<< delete Array
 function deleteNote(i){
     noteTitles.splice(i, 1);
     noteMessages.splice(i, 1);
@@ -109,18 +123,35 @@ function load(){
 
 
 // Clock
-function uhrzeit() {
-    var jetzt = new Date(),
-        h = jetzt.getHours(),
-        m = jetzt.getMinutes(),
-        s = jetzt.getSeconds();
-    m = fuehrendeNull(m);
-    s = fuehrendeNull(s);
-    document.getElementById('uhr').innerHTML = h + ':' + m + ':' + s;
-    setTimeout(uhrzeit, 500);
-  }
-  
-  function fuehrendeNull(zahl) {
-    zahl = (zahl < 10 ? '0' : '' )+ zahl;  
-    return zahl;
-  }
+function getCurrentDate(){       /* manages Time, Date and greetings based an time*/
+    date = new Date();
+    day = date.getDate();
+    month = date.getMonth() ;
+    year = date.getFullYear();
+    hour = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds(); 
+    monthsText = months[month];
+    d = day.toString();
+    y = year.toString();
+
+    if(hour<12){
+        greeting = `Guten Morgen `; 
+    }
+    else if(hour<18){
+        greeting = `Guten Tag `; 
+    }
+    else if(hour<22){
+        greeting = `Guten Abend `; 
+    }
+    else{
+        greeting = `Du solltest besser schlafen. `; 
+    }
+
+    document.getElementById('date').innerHTML = '';
+    document.getElementById('date').innerHTML = `
+    ${greeting}
+    <br>
+    <p>${d + ' . ' + monthsText+' '+ y}</p>`;
+
+}
