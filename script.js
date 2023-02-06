@@ -3,42 +3,22 @@ let noteMessages = ['erste Nachricht', 'zweite Nachricht'];
 let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
 load();
 
-
 function render(){
-    getCurrentDate();
-    renderNotes();
-}
-
-
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function openMenu() {
-    var x = document.getElementById("menu-list");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
-
-
-//<<<<<<<<< add New Note 
-function openTask(){
-    let newNotes = document.getElementById('new-notes');
-    newNotes.classList.remove('d-none'); 
-}
-
-
-function closeTask(){
-    document.getElementById('new-notes').classList.add('d-none');
-}
-
-
-//<<<<<<<<< display Notes
-function renderNotes(){
     let notes = document.getElementById('added-notes');
+    let newNotes = document.getElementById('new-notes');
+    newNotes.innerHTML = '';
+    newNotes.innerHTML = /*html*/`
+    <div id="new-note" class="note">
+            <input id="new-title" class="newNote-innerStyle" type="text" placeholder="Title" required>
+            <textarea  id="new-message" class="newNote-innerStyle" cols="10" rows="5" placeholder="Message" required></textarea>
+            <div class="add">
+                <img onclick="addNote()" id="add-icon" class="icon-note" src="img/icon/check-mark-2-64.png" alt="add Note">
+            </div>
+        </div>
+    `;
 
     notes.innerHTML = '';
-    for (let i = noteTitles.length -1; i >= 0  ; i--) {
+    for (let i = 0; i < noteTitles.length; i++) {
         let title = noteTitles[i];
         let message = noteMessages[i];
         
@@ -47,7 +27,7 @@ function renderNotes(){
             <h2>${title}</h2>
             <p>${message}</p>
             <div class="add">
-                <img onclick="deleteNote(${i})" id="trash-icon" class="icon-note" src="img/icon/trash-2-64.png" alt="delete note">
+                <img id="trash-icon" class="icon-note" src="img/icon/trash-2-64.png" alt="">
             </div>
         </div>
         `;
