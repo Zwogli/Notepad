@@ -9,29 +9,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+
+<body onload="render()">
     <header>
         <img src="img/notepad_640.jpg" alt="">
     </header>
 
-    <section>
-        <div id="new-note">
-            <input type="text" placeholder="Listname">
+    <section id="new-notes" class="center-note"></section>
+    
+    <section id="added-notes" class="center-note"></section>
 
-            <input type="text" id="todo-list" placeholder="Todo">
-
-            <textarea  id="" cols="10" rows="10" placeholder="Message"></textarea>
-            <div id="add">
-                <img src="img/icon/list-2-64.png" alt="add List">
-                <img src="img/icon/text-file-4-64.png" alt="add Text">
-                <img src="img/icon/check-mark-2-64.png" alt="add Note">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© Copyright Mathias Kohler</p>
-        <p>Impressum | Datenschutz</p>
-    </footer>
 </body>
 </html>

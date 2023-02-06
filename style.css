@@ -1,3 +1,4 @@
+/*<<<<<<< Global */
 :root{
     --color-one: #C5A077;
     --color-two: #8E6D46;
@@ -9,9 +10,13 @@
     margin: 0;
     padding: 0;
 }
+.d-none{
+    display: none;
+}
 body{
     background-color: var(--color-three);
 }
+/*<<<<<<< Header */
 header{
     height: 150px;
 }
@@ -21,36 +26,46 @@ header img{
     object-fit: cover;
     opacity: 0.6;
 }
-#new-note{
+/*<<<<<<< Notes */
+.note{
     background-color: var(--color-one);
     margin: 25px 10% ;
-    height: 300px;
+    width: calc(250px - 4px);
     border: 2px solid var(--color-two);
     border-radius: 10px;
     box-shadow: 5px 5px 5px var(--color-two);
     display: flex;
     flex-direction: column;
 }
-#new-note input{
-    margin: 16px 32px 16px 32px;
+.newNote-innerStyle{
+    padding: 8px;
     background-color: var(--color-one);
     color: var(--black);
     border: none;
+}
+#new-note input{
+    margin: 16px 16px 32px 16px;
 }
 #new-note textarea{
-    margin: 16px 32px 16px 32px;
-    background-color: var(--color-one);
-    color: var(--black);
-    border: none;
+    margin: 0px 16px 0px 16px;
 }
-#add{
-    margin: 16px 32px 16px 32px;
-    gap: 32px;
+.add{
+    margin: 16px 16px 16px 16px;
     display: flex;
     justify-content: flex-end;
 }
-/*todo #add img */
-footer{
-    height: 200px;
-    background-color: var(--color-two);
+.icon-note{
+    cursor: pointer;
+    width: 32px;
+}
+.center-note{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.note h2{
+    padding: 16px 16px 32px 16px;
+}
+.note p{
+    padding: 0 16px
 }
