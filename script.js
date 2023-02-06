@@ -5,32 +5,8 @@ load();
 
 
 function render(){
-    renderHeader();
     getCurrentDate();
-    
     renderNotes();
-}
-
-
-function renderHeader(){
-    let header = document.getElementById('header');
-    header.innerHTML = '';
-    header.innerHTML = /*html*/`
-    <img class="header-bg-img" src="img/notepad_640.jpg" alt="Adeventure equipment">
-    <div class="header-container">
-        <div class="header-title">
-            <h1>Notes</h1>
-            <h3 id="date"></h3>
-        </div>
-        <img class="icon-note" onclick="openMenu()" src="img/icon/menu-4-64.png" alt="">
-    </div>
-    <nav>
-        <ul id="menu-list" class="d-none">
-        <li><a onclick="renderNewNote()">Neue Aufgabe <img src="img/icon/text-file-4-64.png" alt="file"></a></li>
-        <li><a>Papierkorb <img src="img/icon/trash-2-64.png" alt="trash"></a></li>
-        </ul>
-    </nav>
-    `;
 }
 
 
@@ -46,7 +22,7 @@ function openMenu() {
 
 
 //<<<<<<<<< add New Note 
-function renderNewNote(){
+function openTask(){
     let newNotes = document.getElementById('new-notes');
     newNotes.classList.remove('d-none'); 
 }
@@ -102,6 +78,7 @@ function deleteNote(i){
 }
 
 
+//<<<<<<<<< Save & Load Array´s
 function save(){
     let saveArrayTitle = JSON.stringify(noteTitles);
     let saveArrayMessage = JSON.stringify(noteMessages);
@@ -122,7 +99,7 @@ function load(){
 }
 
 
-// Clock
+//<<<<<<<<<<<<<<<< Clock
 function getCurrentDate(){       /* manages Time, Date and greetings based an time*/
     date = new Date();
     day = date.getDate();
@@ -153,5 +130,4 @@ function getCurrentDate(){       /* manages Time, Date and greetings based an ti
     ${greeting}
     <br>
     <p>${d + ' . ' + monthsText+' '+ y}</p>`;
-
 }

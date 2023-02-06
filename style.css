@@ -58,6 +58,7 @@ ul{
 li{
     margin: 0 0 16px 0;
     list-style: none;
+    cursor: pointer;
 }
 li a{
     display: flex;
@@ -65,12 +66,15 @@ li a{
     align-items: center;
     gap: 16px;
 }
+li a:hover{
+    text-decoration: underline;
+}
 li img{
     width: 24px;
 }
-/*<<<<<<< Notes */
+/*<<<<<<< New Notes */
 .new-notes-bg{
-    z-index: 500;
+    z-index: 999;
     background-color: #c8c6babd;
     position: fixed;
     top: 0;
@@ -81,6 +85,7 @@ li img{
     justify-content: center;
     align-items: center;
 }
+/*<<<<<<< Notes */
 .note{
     background-color: var(--color-one);
     margin: 25px 10% ;
