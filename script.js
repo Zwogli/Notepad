@@ -3,6 +3,7 @@ let noteMessages = ['erste Nachricht', 'zweite Nachricht'];
 let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
 load();
 
+// ! in progress
 function render(){
     let notes = document.getElementById('added-notes');
     let newNotes = document.getElementById('new-notes');
