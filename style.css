@@ -28,4 +28,8 @@ body img{
 header{
     height: 150px;
     background-color: var(--color-two);
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
 }
