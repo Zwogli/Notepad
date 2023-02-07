@@ -33,7 +33,9 @@ body img{
 /*<<<<<<<<<<<<<Header */
 header{
     padding: 16px 0;
-    background-color: var(--color-two);
+    /* background-color: var(--color-two); */
+    background-image: url(img/hd-wallpaper-gd5c3cfea3_640.jpg);
+    box-shadow: 0 5px 10px var(--color-two);
     z-index: 0;
     position: absolute;
     top:0;
