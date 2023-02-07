@@ -24,6 +24,15 @@ function render(){
     }
 }
 
+// <<<<<<<< Open Overlay New Task
+function openNewTask(){
+    document.getElementById('new-tasks').classList.remove('d-none');
+}
+// <<<<<<<< Close Overlay New Task
+function closeNewTask(){
+    document.getElementById('new-tasks').classList.add('d-none');
+}
+
 
 // <<<<<<<< push new Note in Array
 function addNote(){
