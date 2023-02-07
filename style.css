@@ -11,7 +11,7 @@
     padding: 0;
 }
 .d-none{
-    display: none;
+    display: none!important;
 }
 body{
     background-color: var(--color-three);
@@ -27,6 +27,8 @@ body img{
 .icon{
     width: 24px;
     height: 24px;
+    z-index: 8;
+    cursor: pointer;
 }
 /*<<<<<<<<<<<<<Header */
 header{
@@ -83,7 +85,31 @@ header{
 .task{
     width: 50vw;
     height: 50vh;
-    padding: 16px;
-    background-color: var(--color-one);
+    padding: 32px;
+    background-image: url(img/hd-wallpaper-gd5c3cfea3_640.jpg);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.task input{
+    height: 10%;
+    padding: 0 16px 0 16px;
+}
+.task textarea{
+    height: 60%;
+    padding: 16px 16px 0 16px;
+}
+.task input, textarea{
+    background: none;
+    border: 2px inset var(--color-two);
+    border-radius: 5px;
+}
+.add-task{
+    display: flex;
+    justify-content: flex-end;
+}
+.add-task img{
+width: 48px;
+height: 48px;
 }
