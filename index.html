@@ -13,21 +13,26 @@
 <body onload="render()">
     <img src="img/notepad_640.jpg" alt="">
     <header>
-        <div>
-            <div>
+            <div class="headline">
                 <h1>Notizen</h1>
                 <h3 id="date"></h3>
             </div>
-            <img src="img/icon/menu-4-64.png" alt="">
-        </div>
+            <div class="menu">
+                <div class="test">
+                    <img class="header-icon icon" src="img/icon/text-file-4-64.png" alt="">
+                </div>
+                <div class="test">
+                <img class="header-icon icon" src="img/icon/trash-2-64.png" alt="">
+            </div>
+            </div>
     </header>
 
-    <section id="new-notes" class="center-note">
-        <div id="new-note" class="note">
+    <section id="new-tasks" class="full-screen">
+        <div id="new-note" class="task">
             <input id="new-title" class="newNote-innerStyle" type="text" placeholder="Title" required>
             <textarea  id="new-message" class="newNote-innerStyle" cols="10" rows="5" placeholder="Message" required></textarea>
             <div class="add">
-                <img onclick="addNote()" id="add-icon" class="icon-note" src="img/icon/check-mark-2-64.png" alt="add Note">
+                <img onclick="addNote()" id="add-icon" class="icon" src="img/icon/check-mark-2-64.png" alt="add Note">
             </div>
         </div>
     </section>

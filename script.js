@@ -17,7 +17,7 @@ function render(){
             <h2>${title}</h2>
             <p>${message}</p>
             <div class="add">
-                <img id="trash-icon" class="icon-note" src="img/icon/trash-2-64.png" alt="">
+                <img id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
             </div>
         </div>
         `;

@@ -24,12 +24,66 @@ body img{
     opacity: 0.6;
     z-index: -5;
 }
+.icon{
+    width: 24px;
+    height: 24px;
+}
 /*<<<<<<<<<<<<<Header */
 header{
-    height: 150px;
+    padding: 16px 0;
     background-color: var(--color-two);
+    z-index: 0;
     position: absolute;
     top:0;
     left: 0;
     right: 0;
+}
+.headline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    text-align: center;
+}
+.menu{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+}
+.test{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-three);
+    border-radius: 50%;
+    cursor: pointer!important;
+}
+.header-icon{
+    z-index: 3;
+    width: 22px!important;
+    height: 22px!important;
+    background-color: var(--color-three);
+}
+/*<<<<<<<<<<<<<<<<<<New Task */
+.full-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c8c6ba90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task{
+    width: 50vw;
+    height: 50vh;
+    padding: 16px;
+    background-color: var(--color-one);
+    border-radius: 10px;
 }
