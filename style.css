@@ -30,6 +30,7 @@ body{
 }
 .m-b{
     margin-bottom: 32px;
+    margin-right: 32px;
 }
 .d-space{
     display: flex;
