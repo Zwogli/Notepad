@@ -5,7 +5,7 @@ let trashMessages = [];
 let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
 load();
 
-// ! in progress
+
 function render(){
     getCurrentDate();
     let notes = document.getElementById('notes');
@@ -19,7 +19,7 @@ function render(){
             <h2>${title}</h2>
             <p>${message}</p>
             <div class="bottom-icon">
-                <img onclick="deleteNote(${i})" id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
+                <img onclick="deleteNote(${i})" class="icon" src="img/icon/trash-2-64.png" alt="">
             </div>
         </div>
         `;
@@ -38,9 +38,32 @@ function closeNewTask(){
 // <<<<<<<<< Open / Close Overlay Trash
 function openTrash(){
     document.getElementById('trash').classList.remove('d-none');
+    renderTrash();   
 }
 function closeTrash(){
     document.getElementById('trash').classList.add('d-none');
+}
+
+
+// <<<<<<<<<<< load Trash Notes
+function renderTrash(){
+    let trash = document.getElementById('trash');
+    trash.innerHTML = '';
+    for (let i = trashTitles.length -1; i >= 0; i--) {
+        let title = trashTitles[i];
+        let message = trashMessages[i];
+        
+        trash.innerHTML += /*html*/`
+        <div class="task m-b active-task">
+            <h2>${title}</h2>
+            <p>${message}</p>
+            <div class="d-space bottom-icon">
+                <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
+                <img onclick="deleteTrash(${i})" class="icon" src="img/icon/x-mark-64.png" alt="">
+            </div>
+        </div>
+        `;
+    }
 }
 
 
@@ -62,11 +85,28 @@ function addNote(){
 
 //<<<<<<<<<< delete & push Array into trash
 function deleteNote(i){
-    trashTitles.push(i.value);
-    trashMessages.push(i.value);
+    trashTitles.push(noteTitles[i]);
+    trashMessages.push(noteMessages[i]);
 
     noteTitles.splice(i, 1);
     noteMessages.splice(i, 1);
+
+    render();
+    save();
+}
+function deleteTrash(i){
+    trashTitles.splice(i, 1);
+    trashMessages.splice(i, 1);
+
+    render();
+    save();
+}
+function restoreTrash(i){
+    noteTitles.push(trashTitles[i]);
+    noteMessages.push(trashMessages[i]);
+
+    trashTitles.splice(i, 1);
+    trashMessages.splice(i, 1);
 
     render();
     save();
