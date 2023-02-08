@@ -16,6 +16,7 @@
 }
 body{
     font-family: 'Tangerine', cursive;
+    font-size: x-large;
     height: 100vh;
     background-image: url(img/notepad_640.jpg);
     background-position: center;

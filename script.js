@@ -17,7 +17,7 @@ function render(){
             <h2>${title}</h2>
             <p>${message}</p>
             <div class="bottom-icon">
-                <img onclick="deleteNote(${title})" id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
+                <img onclick="deleteNote(${i})" id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
             </div>
         </div>
         `;
@@ -49,6 +49,9 @@ function addNote(){
 
     noteTitles.push(title.value)
     noteMessages.push(message.value)
+
+    title.value = '';
+    message.value = '';
 
     render()
     save();
