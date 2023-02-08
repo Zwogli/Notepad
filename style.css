@@ -1,4 +1,5 @@
 /*<<<<<<< Global */
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 :root{
     --color-one: #C5A077;
     --color-two: #8E6D46;
@@ -14,6 +15,7 @@
     display: none!important;
 }
 body{
+    font-family: 'Tangerine', cursive;
     height: 100vh;
     background-image: url(img/notepad_640.jpg);
     background-position: center;
@@ -23,13 +25,11 @@ body{
 .icon{
     width: 24px;
     height: 24px;
-    z-index: 8;
     cursor: pointer;
 }
 /*<<<<<<<<<<<<<Header */
 header{
     padding: 16px 0;
-    /* background-color: var(--color-two); */
     background-image: url(img/hd-wallpaper-gd5c3cfea3_640.jpg);
     box-shadow: 0 5px 10px var(--color-two);
     z-index: 0;
@@ -46,12 +46,20 @@ header{
     cursor: default;
     text-align: center;
 }
-/* .menu{
-    margin-top: 16px;
+/*<<<<<<<<<<<<Menu BTN */
+.btn-menu{
+    padding: 0 16px;
+    height: 100vh;
     display: flex;
+    justify-content: flex-end;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
     gap: 42px;
-} */
+}
 .test{
     width: 32px;
     height: 32px;
@@ -62,8 +70,7 @@ header{
     border-radius: 50%;
     cursor: pointer!important;
 }
-.header-icon{
-    z-index: 3;
+.menu-icon{
     width: 22px!important;
     height: 22px!important;
     background-color: var(--color-three);
@@ -112,3 +119,4 @@ header{
 width: 48px;
 height: 48px;
 }
+/*<<<<<<<<<<<<<<Notes */
