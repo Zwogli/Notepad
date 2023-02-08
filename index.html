@@ -11,7 +11,7 @@
 </head>
 
 <body onload="render()">
-    <img src="img/notepad_640.jpg" alt="">
+    <!-- <img src="img/notepad_640.jpg" alt=""> -->
     <header>
             <div class="headline">
                 <h1>Notizen</h1>
@@ -27,8 +27,11 @@
             </div>
     </header>
 
-    <section onclick="closeNewTask()" id="new-tasks" class="full-screen d-none">
+    <section id="new-tasks" class="full-screen d-none">
         <div id="new-note" class="task">
+            <div class="add-task">
+                <img onclick="closeNewTask()" id="close-icon" class="icon" src="img/icon/close-window-64.png" alt="add Note">
+            </div>
             <input id="new-title" class="newNote-innerStyle" type="text" placeholder="Title" required>
             <textarea  id="new-message" class="newNote-innerStyle" cols="10" rows="5" placeholder="Message" required></textarea>
             <div class="add-task">
