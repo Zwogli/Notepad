@@ -1,5 +1,7 @@
 let noteTitles = ['test', 'test2'];
 let noteMessages = ['erste Nachricht', 'zweite Nachricht'];
+let trashTitles = [];
+let trashMessages = [];
 let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
 load();
 
@@ -58,8 +60,11 @@ function addNote(){
 }
 
 
-//<<<<<<<<<< delete Array
+//<<<<<<<<<< delete & push Array into trash
 function deleteNote(i){
+    trashTitles.push(i.value);
+    trashMessages.push(i.value);
+
     noteTitles.splice(i, 1);
     noteMessages.splice(i, 1);
 
@@ -75,6 +80,12 @@ function save(){
 
     localStorage.setItem('Title', saveArrayTitle);
     localStorage.setItem('Message', saveArrayMessage);
+
+    let saveArrayTrashTitle = JSON.stringify(trashTitles);
+    let saveArrayTrashMessage = JSON.stringify(trashMessages);
+
+    localStorage.setItem('trashTitle', saveArrayTrashTitle);
+    localStorage.setItem('trashMessage', saveArrayTrashMessage);
 }
 function load(){
     let saveArrayTitle = localStorage.getItem('Title');
@@ -83,6 +94,13 @@ function load(){
     if (saveArrayTitle && saveArrayMessage) {
         noteTitles = JSON.parse(saveArrayTitle);
         noteMessages = JSON.parse(saveArrayMessage);   
+    }
+
+    let saveArrayTrashTitle = localStorage.getItem('trashTitle');
+    let saveArrayTrashMessage = localStorage.getItem('trashMessage');
+    if (saveArrayTrashTitle && saveArrayTrashMessage) {
+        trashTitles = JSON.parse(saveArrayTrashTitle);
+        trashMessages = JSON.parse(saveArrayTrashMessage);   
     }
 }
 
