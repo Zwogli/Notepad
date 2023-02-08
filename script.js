@@ -13,7 +13,7 @@ function render(){
         let message = noteMessages[i];
         
         notes.innerHTML += /*html*/`
-        <div class="task m-b">
+        <div class="task m-b active-task">
             <h2>${title}</h2>
             <p>${message}</p>
             <div class="bottom-icon">

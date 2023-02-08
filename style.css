@@ -29,7 +29,7 @@ body{
     cursor: pointer;
 }
 .m-b{
-    margin: 32px;
+    margin-bottom: 32px;
 }
 /*<<<<<<<<<<<<<Header */
 header{
@@ -129,9 +129,16 @@ height: 48px;
 /*<<<<<<<<<<<<<<Notes */
 .active-notes{
     position: absolute;
-    top: 150px;
+    top: 180px;
     left: 55px;
     right: 55px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.active-task{
+    width: 250px;
+    padding: 16px!important;
 }
 .task h2, p{
     margin-bottom: 16px;
