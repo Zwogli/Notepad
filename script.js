@@ -6,7 +6,7 @@ load();
 // ! in progress
 function render(){
     getCurrentDate();
-    let notes = document.getElementById('all-notes');
+    let notes = document.getElementById('notes');
     notes.innerHTML = '';
     for (let i = 0; i < noteTitles.length; i++) {
         let title = noteTitles[i];
