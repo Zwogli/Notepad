@@ -24,13 +24,21 @@ function render(){
     }
 }
 
-// <<<<<<<< Open Overlay New Task
+// <<<<<<<< Open / Close Overlay New Task
 function openNewTask(){
     document.getElementById('new-tasks').classList.remove('d-none');
 }
-// <<<<<<<< Close Overlay New Task
 function closeNewTask(){
     document.getElementById('new-tasks').classList.add('d-none');
+}
+
+
+// <<<<<<<<< Open / Close Overlay Trash
+function openTrash(){
+    document.getElementById('trash').classList.remove('d-none');
+}
+function closeTrash(){
+    document.getElementById('trash').classList.add('d-none');
 }
 
 
@@ -65,8 +73,6 @@ function save(){
     localStorage.setItem('Title', saveArrayTitle);
     localStorage.setItem('Message', saveArrayMessage);
 }
-
-
 function load(){
     let saveArrayTitle = localStorage.getItem('Title');
     let saveArrayMessage = localStorage.getItem('Message');
