@@ -102,6 +102,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 5px 5px 10px var(--color-two);
+    text-align: center;
 }
 .task input{
     height: 10%;
