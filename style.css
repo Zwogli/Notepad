@@ -27,6 +27,9 @@ body{
     height: 24px;
     cursor: pointer;
 }
+.m-b{
+    margin: 32px;
+}
 /*<<<<<<<<<<<<<Header */
 header{
     padding: 16px 0;
@@ -87,9 +90,11 @@ header{
     justify-content: center;
     align-items: center;
 }
-.task{
+.new-task{
     width: 50vw;
     height: 50vh;
+}
+.task{
     padding: 32px;
     background-image: url(img/hd-wallpaper-gd5c3cfea3_640.jpg);
     border-radius: 10px;
@@ -120,3 +125,15 @@ width: 48px;
 height: 48px;
 }
 /*<<<<<<<<<<<<<<Notes */
+.active-notes{
+    position: absolute;
+    top: 150px;
+    left: 55px;
+    right: 55px;
+}
+.task h2, p{
+    margin-bottom: 16px;
+}
+.bottom-icon{
+    text-align: end;
+}

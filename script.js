@@ -13,11 +13,11 @@ function render(){
         let message = noteMessages[i];
         
         notes.innerHTML += /*html*/`
-        <div class="note">
+        <div class="task m-b">
             <h2>${title}</h2>
             <p>${message}</p>
-            <div class="add">
-                <img id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
+            <div class="bottom-icon">
+                <img onclick="deleteNote()" id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
             </div>
         </div>
         `;
