@@ -8,7 +8,7 @@ function render(){
     getCurrentDate();
     let notes = document.getElementById('notes');
     notes.innerHTML = '';
-    for (let i = 0; i < noteTitles.length; i++) {
+    for (let i = noteTitles.length -1; i >= 0; i--) {
         let title = noteTitles[i];
         let message = noteMessages[i];
         
@@ -17,7 +17,7 @@ function render(){
             <h2>${title}</h2>
             <p>${message}</p>
             <div class="bottom-icon">
-                <img onclick="deleteNote()" id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
+                <img onclick="deleteNote(${title})" id="trash-icon" class="icon" src="img/icon/trash-2-64.png" alt="">
             </div>
         </div>
         `;
