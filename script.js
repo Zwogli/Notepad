@@ -28,12 +28,14 @@ function render(){
 
 // <<<<<<<< Open / Close Overlay New Task
 function openNewTask(){
+    document.getElementById('body').classList.add('overflow')
     document.getElementById('new-tasks').classList.remove('d-none');
     let path = document.getElementById('path');
     path.innerHTML = '';
     path.innerHTML = `Neue Notiz`;
 }
 function closeNewTask(){
+    document.getElementById('body').classList.remove('overflow')
     document.getElementById('new-tasks').classList.add('d-none');
     let path = document.getElementById('path');
     path.innerHTML = '';
@@ -43,6 +45,7 @@ function closeNewTask(){
 
 // <<<<<<<<< Open / Close Overlay Trash
 function openTrash(){
+    document.getElementById('body').classList.add('overflow')
     document.getElementById('trash').classList.remove('d-none');
     let path = document.getElementById('path');
     path.innerHTML = '';
@@ -50,6 +53,7 @@ function openTrash(){
     renderTrash();   
 }
 function closeTrash(){
+    document.getElementById('body').classList.remove('overflow')
     document.getElementById('trash').classList.add('d-none');
     let path = document.getElementById('path');
     path.innerHTML = '';

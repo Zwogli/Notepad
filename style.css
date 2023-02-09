@@ -41,6 +41,9 @@ body{
 .cursor{
     cursor: pointer;
 }
+.overflow{
+    overflow-y: hidden;
+}
 /*<<<<<<<<<<<<<Header */
 header{
     padding: 16px 0;
