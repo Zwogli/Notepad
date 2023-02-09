@@ -71,7 +71,7 @@ function renderTrash(){
             <p>${message}</p>
             <div class="d-space bottom-icon">
                 <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
-                <img onclick="deleteTrash(${i})" class="icon" src="img/icon/x-mark-64.png" alt="">
+                <span onclick="deleteTrash(${i})" class="material-symbols-outlined">delete_forever</span>
             </div>
         </div>
         `;
