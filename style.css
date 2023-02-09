@@ -129,7 +129,7 @@ header{
     display: flex;
     justify-content: flex-end;
 }
-.add-new-task img{
+.add-new-task{
 width: 48px;
 height: 48px;
 }
