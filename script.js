@@ -59,7 +59,7 @@ function closeTrash(){
 
 // <<<<<<<<<<< load Trash Notes
 function renderTrash(){
-    let trash = document.getElementById('trash');
+    let trash = document.getElementById('trash-file');
     trash.innerHTML = '';
     for (let i = trashTitles.length -1; i >= 0; i--) {
         let title = trashTitles[i];
@@ -69,6 +69,7 @@ function renderTrash(){
         <div class="task m-b active-task">
             <h2>${title}</h2>
             <p>${message}</p>
+            
             <div class="d-space bottom-icon">
                 <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
                 <span onclick="deleteTrash(${i})" class="cursor material-symbols-outlined">delete_forever</span>

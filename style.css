@@ -168,8 +168,27 @@ height: 48px;
 }
 /*<<<<<<<<< Trash screen */
 .trash-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #c8c6ba90;
+    /* background-size: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-attachment: fixed;
     flex-wrap: wrap;
     padding-top: 230px;
     padding-bottom: 30px;
+}
+#trash-file{
+    width: calc(100vw - 32px);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
 }
