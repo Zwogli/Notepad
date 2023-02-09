@@ -38,6 +38,9 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.cursor{
+    cursor: pointer;
+}
 /*<<<<<<<<<<<<<Header */
 header{
     padding: 16px 0;
