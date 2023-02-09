@@ -29,19 +29,31 @@ function render(){
 // <<<<<<<< Open / Close Overlay New Task
 function openNewTask(){
     document.getElementById('new-tasks').classList.remove('d-none');
+    let path = document.getElementById('path');
+    path.innerHTML = '';
+    path.innerHTML = `Neue Notiz`;
 }
 function closeNewTask(){
     document.getElementById('new-tasks').classList.add('d-none');
+    let path = document.getElementById('path');
+    path.innerHTML = '';
+    path.innerHTML = `Notizen`;
 }
 
 
 // <<<<<<<<< Open / Close Overlay Trash
 function openTrash(){
     document.getElementById('trash').classList.remove('d-none');
+    let path = document.getElementById('path');
+    path.innerHTML = '';
+    path.innerHTML = `Papierkorb`;
     renderTrash();   
 }
 function closeTrash(){
     document.getElementById('trash').classList.add('d-none');
+    let path = document.getElementById('path');
+    path.innerHTML = '';
+    path.innerHTML = `Notizen`;
 }
 
 

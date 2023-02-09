@@ -1,5 +1,6 @@
 /*<<<<<<< Global */
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 :root{
     --color-one: #C5A077;
     --color-two: #8E6D46;
@@ -15,13 +16,14 @@
     display: none!important;
 }
 body{
-    font-family: 'Tangerine', cursive;
+    font-family: 'Charm', cursive;
     font-size: x-large;
     height: 100vh;
     background-image: url(img/notepad_640.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 .icon{
     width: 24px;
@@ -134,7 +136,7 @@ height: 48px;
 /*<<<<<<<<<<<<<<Notes */
 .active-notes{
     position: absolute;
-    top: 180px;
+    top: 230px;
     left: 55px;
     right: 55px;
     display: flex;
