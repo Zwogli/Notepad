@@ -18,7 +18,7 @@
 body{
     font-family: 'Charm', cursive;
     font-size: x-large;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(img/notepad_640.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ header{
     right: 0;
 }
 .headline{
-    position: sticky;
+    position: fixed;
     z-index: 5;
     display: flex;
     flex-direction: column;
@@ -71,11 +71,13 @@ header{
     right: 16px;
     top: 50vh; */
     padding: 0 16px;
-    height: calc(100vh - 191.99px);
+    height: 100%;
     display: flex;
     justify-content: flex-end;
 }
 .menu{
+    position: fixed;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +101,7 @@ header{
 }
 /*<<<<<<<<<<<<<<<<<<New Task */
 .full-screen{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -176,12 +178,12 @@ height: 48px;
 }
 /*<<<<<<<<< Trash screen */
 .trash-screen{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     /* width: 100vw; */
-    height: 100vh;
+    min-height: 100vh;
     background-color: #c8c6ba90;
     /* background-size: 100%; */
     display: flex;
