@@ -90,8 +90,8 @@ function addNote(){
     let message = document.getElementById('new-message')
 
     if(title.value == '' ||
-    message.value == ''){
-            alert('Bitte Titel und Nachricht einfügen')  
+    message.value == ''){ 
+            document.getElementById('alert-newTask').classList.remove('d-none');
         }else{
         
         noteTitles.push(title.value)
@@ -104,6 +104,11 @@ function addNote(){
         save();
         closeNewTask()
     }
+}
+
+
+function closeAlertNewTask(){
+    document.getElementById('alert-newTask').classList.add('d-none');
 }
 
 
@@ -199,5 +204,5 @@ function getCurrentDate(){       /* manages Time, Date and greetings based an ti
     document.getElementById('date').innerHTML = `
     ${greeting}
     <br>
-    <p>${d + ' . ' + monthsText+' '+ y}</p>`;
+    ${d + ' . ' + monthsText+' '+ y}`;
 }

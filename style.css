@@ -56,6 +56,8 @@ header{
     right: 0;
 }
 .headline{
+    position: sticky;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,8 +67,11 @@ header{
 }
 /*<<<<<<<<<<<<Menu BTN */
 .btn-menu{
+    /* position: sticky ;
+    right: 16px;
+    top: 50vh; */
     padding: 0 16px;
-    height: 100vh;
+    height: calc(100vh - 191.99px);
     display: flex;
     justify-content: flex-end;
 }
@@ -78,8 +83,8 @@ header{
     gap: 42px;
 }
 .test{
-    width: min(100% - 32px, 1400px - 58px);
-    /* height: 32px; */
+    width: 32px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,4 +199,34 @@ height: 48px;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+}
+/*<<<<<<<<< Alert Box */
+.alert-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c8c6ba90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert{
+    background-image: url(img/hd-wallpaper-gd5c3cfea3_640.jpg);
+    margin: 0 32px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--color-two);
+    text-align: center;
+}
+@media (min-width: 500px){
+    .test{
+        width: 62px;
+        height: 62px;
+    }
+    .menu-icon{
+        width: 42px!important;
+        height: 42px!important;
+    }
 }
