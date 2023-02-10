@@ -89,14 +89,21 @@ function addNote(){
     let title = document.getElementById('new-title');
     let message = document.getElementById('new-message')
 
-    noteTitles.push(title.value)
-    noteMessages.push(message.value)
-
-    title.value = '';
-    message.value = '';
-
-    render()
-    save();
+    if(title.value == '' ||
+    message.value == ''){
+            alert('Bitte Titel und Nachricht einfügen')  
+        }else{
+        
+        noteTitles.push(title.value)
+        noteMessages.push(message.value)
+        
+        title.value = '';
+        message.value = '';
+        
+        render()
+        save();
+        closeNewTask()
+    }
 }
 
 

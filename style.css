@@ -78,8 +78,8 @@ header{
     gap: 42px;
 }
 .test{
-    width: 32px;
-    height: 32px;
+    width: min(100% - 32px, 1400px - 58px);
+    /* height: 32px; */
     display: flex;
     justify-content: center;
     align-items: center;
