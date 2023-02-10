@@ -168,7 +168,7 @@ height: 48px;
 }
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
+  'FILL' 1,
   'wght' 400,
   'GRAD' 0,
   'opsz' 48;
@@ -178,14 +178,13 @@ height: 48px;
 }
 /*<<<<<<<<< Trash screen */
 .trash-screen{
+    overflow-y: scroll;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    /* width: 100vw; */
     min-height: 100vh;
     background-color: #c8c6ba90;
-    /* background-size: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
