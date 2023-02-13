@@ -2,10 +2,10 @@ let noteTitles = ['test', 'test2'];
 let noteMessages = ['erste Nachricht', 'zweite Nachricht'];
 let trashTitles = [];
 let trashMessages = [];
-let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
+let months = ['Januar', 'Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
 load();
 
-
+// <<<<<<<<<<<< Render Notes
 function render(){
     getCurrentDate();
     let notes = document.getElementById('notes');
@@ -14,7 +14,11 @@ function render(){
         let title = noteTitles[i];
         let message = noteMessages[i];
         
-        notes.innerHTML += /*html*/`
+        notes.innerHTML += generateNotesHTML(i, title, message);
+    }
+}
+function generateNotesHTML(i, title, message){
+    return /*html*/`
         <div class="task m-b active-task">
             <h2>${title}</h2>
             <p>${message}</p>
@@ -23,7 +27,6 @@ function render(){
             </div>
         </div>
         `;
-    }
 }
 
 // <<<<<<<< Open / Close Overlay New Task
@@ -100,17 +103,18 @@ function addNote(){
     message.value == ''){ 
             document.getElementById('alert-newTask').classList.remove('d-none');
         }else{
-        
-        noteTitles.push(title.value)
-        noteMessages.push(message.value)
-        
-        title.value = '';
-        message.value = '';
-        
-        render()
+        moveNoteToArray(title, message);
+        render();
         save();
-        closeNewTask()
+        closeNewTask();
     }
+}
+function moveNoteToArray(title, message){
+    noteTitles.push(title.value);
+    noteMessages.push(message.value);
+    
+    title.value = '';
+    message.value = '';
 }
 
 
