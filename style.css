@@ -198,7 +198,7 @@ height: 48px;
     z-index: 2;
 }
 #trash-file{
-    /* width: calc(100vw - 32px); */
+    width: 100vw;
     height: calc(100vh - 190px);
     display: flex;
     flex-wrap: wrap;
