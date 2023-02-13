@@ -68,29 +68,35 @@ function closeTrash(){
 function renderTrash(){
     let trash = document.getElementById('trash-file');
     trash.innerHTML = '';
+    if(trashTitles.length == 0){
+        emptyTrashHtml(trash)
+    }
     for (let i = trashTitles.length -1; i >= 0; i--) {
         let title = trashTitles[i];
         let message = trashMessages[i];
         
-        if(i >= 0){
-            trash.innerHTML += /*html*/`
-            <div class="task m-b active-task">
-                <h2>${title}</h2>
-                <p>${message}</p>
-                <div class="d-space bottom-icon">
-                    <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
-                    <span onclick="deleteTrash(${i})" class="cursor material-symbols-outlined">delete_forever</span>
-                </div>
-            </div>
-            `;  
-        }else{
-            trash.innerHTML = /*html*/`
-            <div>
-            Keine nachricht
-            </div>
-            `;
-        }
+            trash.innerHTML += generateTrashHtml(i, title, message);
     }
+}
+function emptyTrashHtml(trash){
+    trash.innerHTML = /*html*/`
+        <div class="task">
+        <h2>Wenn du nicht´s zum Wegwerfen hast, <br> <br>
+        dann STÖR mich nicht!</h2>
+        </div>
+        `;
+}
+function generateTrashHtml(i, title, message){
+    return /*html*/`
+    <div class="task m-b active-task">
+        <h2>${title}</h2>
+        <p>${message}</p>
+        <div class="d-space bottom-icon">
+            <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
+            <span onclick="deleteTrash(${i})" class="cursor material-symbols-outlined">delete_forever</span>
+        </div>
+    </div>
+    `;
 }
 
 
