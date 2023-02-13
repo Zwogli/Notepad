@@ -81,8 +81,7 @@ function renderTrash(){
 function emptyTrashHtml(trash){
     trash.innerHTML = /*html*/`
         <div class="task">
-        <h2>Wenn du nicht´s zum Wegwerfen hast, <br> <br>
-        dann STÖR mich nicht!</h2>
+        <h2>Wenn du was von mir willst, <br><br> möchte ich erst einmal was von dir!</h2>
         </div>
         `;
 }
