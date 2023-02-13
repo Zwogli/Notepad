@@ -20,12 +20,16 @@
 
     <section class="btn-menu">
         <div class="menu">
-            <div class="test">
-                <img onclick="openNewTask()" class="menu-icon icon" src="img/icon/add-file-64.png" alt="">
-            </div>
-                <div class="test">
-                <img onclick="openTrash()" class="menu-icon icon" src="img/icon/trash-2-64.png" alt="">
-            </div>
+            <a onclick="openNewTask()">
+                <div class="circle">
+                    <img class="menu-icon icon" src="img/icon/add-file-64.png" alt="">
+                </div>
+            </a>
+            <a onclick="openTrash()">
+                <div class="circle">
+                    <img class="menu-icon icon" src="img/icon/trash-2-64.png" alt="">
+                </div>
+            </a>
         </div>
     </section>
 
@@ -53,7 +57,7 @@
     </section>
 
     <section onclick="closeTrash()" id="trash" class="trash-screen d-none">
-    <div id="trash-file"></div>
+    <!-- <div id="trash-file"></div> -->
     </section>
     
     
