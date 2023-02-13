@@ -178,20 +178,22 @@ height: 48px;
 }
 /*<<<<<<<<< Trash screen */
 .trash-screen{
-    overflow-y: scroll;
+    min-height: 100vh;
+    padding-top: 230px;
+    padding-bottom: 30px;
+    background-color: #c8c6ba90;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    min-height: 100vh;
-    background-color: #c8c6ba90;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed;
     flex-wrap: wrap;
-    padding-top: 230px;
-    padding-bottom: 30px;
+    background-attachment: fixed;
+}
+#trash{
+    overflow-y: scroll;
 }
 #trash-file{
     width: calc(100vw - 32px);
