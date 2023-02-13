@@ -56,6 +56,7 @@ header{
     right: 0;
 }
 .headline{
+    height: calc(190px - 32px);
     position: fixed;
     z-index: 5;
     display: flex;
@@ -75,6 +76,9 @@ header{
     display: flex;
     justify-content: flex-end;
 }
+.btn-menu a{
+    cursor: pointer;
+}
 .menu{
     position: fixed;
     height: 100vh;
@@ -84,7 +88,7 @@ header{
     align-items: flex-end;
     gap: 42px;
 }
-.test{
+.circle{
     width: 32px;
     height: 32px;
     display: flex;
@@ -137,6 +141,7 @@ header{
     background: none;
     border: 2px inset var(--color-two);
     border-radius: 5px;
+    outline: none;
 }
 .add-task{
     display: flex;
@@ -188,12 +193,6 @@ height: 48px;
     right: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-attachment: fixed;
-}
-#trash{
-    overflow-y: scroll;
 }
 #trash-file{
     width: calc(100vw - 32px);
@@ -224,7 +223,7 @@ height: 48px;
     text-align: center;
 }
 @media (min-width: 500px){
-    .test{
+    .circle{
         width: 62px;
         height: 62px;
     }

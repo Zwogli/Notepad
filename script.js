@@ -69,17 +69,24 @@ function renderTrash(){
         let title = trashTitles[i];
         let message = trashMessages[i];
         
-        trash.innerHTML += /*html*/`
-        <div class="task m-b active-task">
-            <h2>${title}</h2>
-            <p>${message}</p>
-            
-            <div class="d-space bottom-icon">
-                <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
-                <span onclick="deleteTrash(${i})" class="cursor material-symbols-outlined">delete_forever</span>
+        if(i >= 0){
+            trash.innerHTML += /*html*/`
+            <div class="task m-b active-task">
+                <h2>${title}</h2>
+                <p>${message}</p>
+                <div class="d-space bottom-icon">
+                    <img onclick="restoreTrash(${i})" class="icon" src="img/icon/download-2-64.png" alt="">
+                    <span onclick="deleteTrash(${i})" class="cursor material-symbols-outlined">delete_forever</span>
+                </div>
             </div>
-        </div>
-        `;
+            `;  
+        }else{
+            trash.innerHTML = /*html*/`
+            <div>
+            Keine nachricht
+            </div>
+            `;
+        }
     }
 }
 
