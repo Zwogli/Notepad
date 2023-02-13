@@ -222,6 +222,26 @@ height: 48px;
     box-shadow: 5px 5px 5px var(--color-two);
     text-align: center;
 }
+/*<<<<<<<<< Scrollbar Design */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-three); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-one); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-two); 
+  }
 @media (min-width: 500px){
     .circle{
         width: 62px;
