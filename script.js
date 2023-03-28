@@ -31,7 +31,7 @@ function generateNotesHTML(i, title, message){
 
 // <<<<<<<< Open / Close Overlay New Task
 function openNewTask(){
-    document.getElementById('body').classList.add('overflow')
+    document.getElementById('body').classList.add('overflow');
     document.getElementById('new-tasks').classList.remove('d-none');
     let path = document.getElementById('path');
     path.innerHTML = '';
